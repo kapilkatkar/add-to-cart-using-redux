@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client";
-import store from "./redux/store.jsx";
+import store from "./redux/Store.jsx";
 import { Provider } from "react-redux";
 import ProductList from "./features/product/Product.Layot.jsx";
 import MyCart from "./features/cart/Cart.Layout.jsx";
