@@ -25,3 +25,10 @@ const userSlice = createSlice({
 
 export const { getUsers, getUserSuccess, getUserFailed } = userSlice.actions;
 export default userSlice.reducer;
+
+/**
+ * step 1 - create slice
+ * step 2 - connect slice to the store
+ * step 3 - create saga file
+ * step 4 - then create layout.
+ */
