@@ -3,12 +3,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUsers } from "./user.slice";
 
 const UserComponent = () => {
-  const users = useSelector((state) => state.users);
+  const users = useSelector((state) => {
+    console.log("state", state);
+    return state.users;
+  });
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getUsers());
-  }, []);
+  }, [dispatch]);
 
   console.log("users", users.data);
 

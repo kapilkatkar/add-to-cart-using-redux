@@ -19,14 +19,13 @@ function* getUsers() {
     );
     console.log("api response inside getUsers");
 
-    if (!apiResponse) {
+    if (apiResponse) {
+      console.log("api response inside getusers saga is pass");
+      yield put(getUserSuccess({ result: apiResponse }));
+    } else {
       console.log("api response inside getusers saga is failed");
       yield put(getUserFailed());
-      return;
     }
-
-    console.log("api response inside getusers saga is pass");
-    yield put(getUserSuccess({ result: apiResponse }));
   } catch (err) {
     console.log("catch");
     yield put(getUserFailed());
